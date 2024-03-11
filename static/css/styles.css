@@ -21,4 +21,5 @@ body {
 
 .btn-done {
     background-color: green;
+    border: none;
 }
