@@ -1,0 +1,17 @@
+body {
+    margin-top: 20px;
+}
+
+.done {
+    color: green;
+}
+
+.not-done {
+    color: red;
+}
+
+.task-box {
+    border-bottom: 2px solid grey;
+    list-style: none;
+}
+
