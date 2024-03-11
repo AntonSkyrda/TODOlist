@@ -7,7 +7,7 @@
       Add task
     </a>
   </h1>
-
+  <br>
   {% if task_list %}
     <ul>
       {% for task in task_list %}
@@ -20,6 +20,13 @@
               {% else %}
                 <span class="not-done">Not Done</span>
               {% endif %}
+              {% if task.done %}
+                <a style="float: right" href="{% url 'tasks:mark-task-undone' pk=task.pk %}" class="btn btn-secondary link-to-page">Undo</a>
+              {% else %}
+                <a style="float: right" href="{% url 'tasks:mark-task-done' pk=task.pk %}" class="btn btn-primary link-to-page btn-done">Complete</a>
+              {% endif %}
+
+
             </strong>
           </p>
           <p>
