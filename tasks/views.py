@@ -8,7 +8,7 @@ from .models import Tag, Task
 
 class TaskListView(generic.ListView):
     model = Task
-    paginate_by = 10
+    paginate_by = 5
     template_name = "tasks/index.html"
 
 
@@ -31,7 +31,7 @@ class DeleteTaskView(generic.DeleteView):
 
 class TagsListView(generic.ListView):
     model = Tag
-    paginate_by = 10
+    paginate_by = 5
 
 
 class CreateTagView(generic.CreateView):
