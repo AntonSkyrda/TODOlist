@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>TODO list</h1>
+  <h1>
+    TODO list
+    <a style="float: right" href="{% url 'tasks:task-create' %}" class="btn btn-primary link-to-page">
+      Add task
+    </a>
+  </h1>
 
   {% if task_list %}
     <ul>
@@ -25,6 +30,8 @@
             {% for tag in task.tags.all %}
               {{ tag }}
             {% endfor %}
+            <a href="{% url "tasks:task-update" pk=task.id %}">Update</a>
+            <a href="{% url "tasks:task-delete" pk=task.id %}">Delete</a>
           </p>
         </li>
         <br>
