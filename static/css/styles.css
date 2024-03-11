@@ -1,0 +1,25 @@
+body {
+    margin-top: 20px;
+}
+
+.done {
+    color: green;
+}
+
+.not-done {
+    color: red;
+}
+
+.task-box {
+    border-bottom: 1px solid grey;
+    list-style: none;
+}
+
+.tag {
+    color: grey;
+}
+
+.btn-done {
+    background-color: green;
+    border: none;
+}
