@@ -2,10 +2,10 @@
 {% block content %}
   <h1>Delete task</h1>
 
-  <p>Are you sure to delete task: {{ task }}</p>
+  <p>Are you sure to delete task: {{ task.title }}</p>
   <form action="" method="post">
     {% csrf_token %}
     <input type="submit" value="Yes" class="btn btn-danger">
-    <a href="{% url "tasks:index" %}"><input type="submit" value="No" class="btn btn-primary"></a>
+    <a href="{% url "tasks:index" %}" class="btn btn-primary">No</a>
   </form>
 {% endblock %}
